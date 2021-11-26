@@ -12,40 +12,41 @@ console.log(message.indexOf("still"));
 // Log the index of word "answers" in message
 console.log(message.indexOf("answers"));
 // Log true or false based on whether the word "answers" exist in message or not
-console.log(message.includes("answers"));
+console.log(message.includes("answers") !== -1);
 // Log true or false based on whether the word "they" exist in message or not
-console.log(message.includes("they"));
+console.log(message.includes("they") !== -1);
 // Log true or false based on whether the word "is" exist in message or not
-console.log(message.includes("is"));
+console.log(message.includes("is") !== -1);
 // Log true or false based on whether the word "Is" exist in message or not
-console.log(message.includes("Is"));
+console.log(message.includes("Is") !== -1);
 // Check and log whether the word from index 3 to 6 is "you" or not (use slice)
-console.log(message.slice(3, 6));
+console.log(message.slice(3, 6) === "you");
 // Check and log whether the word from index 7 to 8 is "a" or not
-console.log(message.slice(7, 8));
+console.log(message.slice(7, 8) === "a");
 // Check and log whether the last 3 character in message is "no!" or not (you can use -3 in slice)
-console.log(message.slice(-3));
+console.log(message.slice(-3) === "no!");
 // Check and log whether the last 5 character in message is "no!" or not
-console.log(message.slice(-5));
+console.log(message.slice(-5) === "no!");
 // Log the message variable, all in lowecase
 console.log(message.toLowerCase());
 // Log the message variable, all in uppercase
 console.log(message.toUpperCase());
 // Replace the word "are" to "can't", store it in a new variable named `newMessage` and log it.
-newMessage = message.replace("are", "can't");
-console.log(`${newMessage}`);
+let newMessage = message.replace("are", "can't");
+console.log(newMessage);
 // Replace the word "still" to "" (empty) using newMessage variable, and re-assign the output to the variable `newMessage` and log it.
-let newMessage = console.log(message.replace("still", ""));
+newMessage.replace("still", "");
 // Replace the word "thinking" to "decide" using newMessage variable, and re-assign the output to the variable `newMessage` and log it.
-const newMessage = console.log(message.replace("thinking", "decide"));
+newMessage = newMessage.replace("thinking", "decide");
+console.log(newMessage);
 
 // Log all the characters from the message variable (you can user for..of loop on string)
-let final = "";
-for(char of message){
-    final.push(char);
-}
-console.log(final);
+for(let char of message){
+    console.log(char);
+};
 // Split all the words in message (split by " " space) and store it in a variable messageArray
-messageArray = message.split('');
+messageArray = message.split(' ');
 // Log all the words of messageArray
-console.log(messageArray);
+for(let word of messageArray){
+console.log(word);
+}
