@@ -7,15 +7,15 @@ let to = 'Arya Stark';
 /*
 1. Find the index of the first 'is' in the variable quote. And store it in a new variable named indexOfIs
 */
-
+let indexOfIs = quote.indexOf("is");
 /*
 2. Find the character at the index indexOfIs (Problem 1) in quote.
 */
-
+quote.charAt(indexOfIs);
 /*
 3. Log the message saying `The index of first is in quote is 7`
 */
-
+console.log(`The index of first is in quote is 7`);
 /*
 4. Log the message for first 6 characters of quote like this.
   The character at index 0 is 'T'
